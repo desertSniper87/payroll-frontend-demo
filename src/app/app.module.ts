@@ -7,16 +7,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
+import { MenuComponent } from './menu/menu.component';
+import {MatTabsModule} from '@angular/material';
+import { PayrollIncludeComponent } from './payroll-include/payroll-include.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    PayrollIncludeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
