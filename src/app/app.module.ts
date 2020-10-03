@@ -8,7 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
-import {MatTabsModule} from '@angular/material';
+import {MatListModule, MatTableModule, MatTabsModule} from '@angular/material';
 import { PayrollIncludeComponent } from './payroll-include/payroll-include.component';
 
 @NgModule({
@@ -22,7 +22,9 @@ import { PayrollIncludeComponent } from './payroll-include/payroll-include.compo
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

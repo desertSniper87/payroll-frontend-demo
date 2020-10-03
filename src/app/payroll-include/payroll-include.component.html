@@ -1,3 +1,48 @@
-<p>
-  payroll-include works!
-</p>
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <table mat-table [dataSource]="EMPLOYEES" fxFlex>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="image">
+      <th mat-header-cell *matHeaderCellDef> image </th>
+      <td mat-cell *matCellDef="let element"> {{element.image}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="designation">
+      <th mat-header-cell *matHeaderCellDef> Designation </th>
+      <td mat-cell *matCellDef="let element"> {{element.designation}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="branch">
+      <th mat-header-cell *matHeaderCellDef> branch </th>
+      <td mat-cell *matCellDef="let element"> {{element.branch}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="include_in_payroll">
+      <th mat-header-cell *matHeaderCellDef> include_in_payroll </th>
+      <td mat-cell *matCellDef="let element"> {{element.include_in_payroll}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="self_withdraw">
+      <th mat-header-cell *matHeaderCellDef> self_withdraw </th>
+      <td mat-cell *matCellDef="let element"> {{element.self_withdraw}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+</div>
